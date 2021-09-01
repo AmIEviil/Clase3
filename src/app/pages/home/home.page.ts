@@ -28,14 +28,18 @@ lista_persona = new Array ();
 perso:any;
 //creacion de un metodo
 grabar(){
-    console.log(this.persona.value);
+    //alert(this.persona.controls.elRut.value);
+    //console.log(this.persona.value);
     this.perso = {
         rut:this.persona.controls.elRut.value,
         nombre:this.persona.controls.elNombreCompleto.value,
         edad:this.persona.controls.elEdad.value
     };
-    console.log(this.perso);
+    //console.log(this.perso);
     this.lista_persona.push(this.perso);
+    var datos = this.lista_persona;
+    localStorage.setItem('misdatos',JSON.stringify(datos));
+    alert("Grabo");
 }
 eliminar(){}
 
