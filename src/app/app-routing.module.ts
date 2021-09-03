@@ -16,7 +16,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/ejemplo1/ejemplo1.module').then( m => m.Ejemplo1PageModule)
   },
   {
-    path: 'ejemplo2',
+    path: 'ejemplo2/:valor',
     loadChildren: () => import('./pages/ejemplo2/ejemplo2.module').then( m => m.Ejemplo2PageModule)
   },
   {
